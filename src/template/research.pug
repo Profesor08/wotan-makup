@@ -1,0 +1,466 @@
+include global-include
+doctype html
+html
+  head
+    include section/document-head
+
+  body.research-page
+
+    include section/header
+
+    main.main.d-flex.flex-column
+
+      include section/search-section
+
+      .page-nav-top
+        .container.d-sm-flex.justify-content-between.align-items-start.align-items-lg-center
+          .breadcrumbs.d-flex.flex-column.flex-lg-row
+            a.crumb(href="#!") Россия
+            a.crumb(href="#!") Пищевая продукция
+            a.crumb(href="#!") Хлебобулочная продукция
+          .page-addition.d-flex.flex-column.flex-lg-row
+            a.addition.icon-link(href="#!")
+              include ../images/favourite.svg
+              | В избранное
+            a.addition.icon-link(href="#!")
+              include ../images/download.svg
+              | Скачать архив (25mb)
+
+      .page-title
+        .container
+          h1 Рынок хлебобулочных полуфабрикатов
+
+
+
+      .content-section
+        .container
+          .row
+            .col-12.col-lg-3.sidebar
+              +left-menu("production")
+
+
+            .col-12.col-lg-9.page-content
+
+              .chart-container.chart-component(
+                data-chart-url="demo/0"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title производство по РФ в целом
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu
+                      .chart-menu-button.icon-link.active
+                        include ../images/contacts.svg
+                        | Контакты
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="percent"
+                      ) % Проценты
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="tons"
+                      ) Тысячи тонн
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline
+
+              .chart-container.chart-component(
+                data-chart-url="demo/1"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title производство по РФ в целом
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="percent"
+                      ) % Проценты
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="tons"
+                      ) Тысячи тонн
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/2"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title производство по РФ в целом
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="percent"
+                      ) % Проценты
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="tons"
+                      ) Тысячи тонн
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/3"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title динамика по федеральным округам
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="percent"
+                      ) % Проценты
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="tons"
+                      ) Тысячи тонн
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/4"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title динамика ПО СУБЪЕКТАМ РФ
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="percent"
+                      ) % Проценты
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="tons"
+                      ) Тысячи тонн
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/5"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title динамика по категориям
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="percent"
+                      ) % Проценты
+                      button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="measure", data-type="tons"
+                      ) Тысячи тонн
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/6"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title структура по федеральным округам
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .custom-select-box.custom-select-box-sm.mb-2.mb-lg-0
+                      select(name="region")
+                        option(value="", disabled, selected) 2000 год
+                        option(value="2001 год") 2001 год
+                        option(value="2002 год") 2002 год
+                        option(value="2003 год") 2003 год
+                        option(value="2004 год") 2004 год
+                        option(value="2005 год") 2005 год
+                        option(value="2006 год") 2006 год
+                        option(value="2007 год") 2007 год
+                        option(value="2008 год") 2008 год
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/7"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title структура по субъектам РФ
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .custom-select-box.custom-select-box-sm.mb-2.mb-lg-0
+                      select(name="region")
+                        option(value="", disabled, selected) 2000 год
+                        option(value="2001 год") 2001 год
+                        option(value="2002 год") 2002 год
+                        option(value="2003 год") 2003 год
+                        option(value="2004 год") 2004 год
+                        option(value="2005 год") 2005 год
+                        option(value="2006 год") 2006 год
+                        option(value="2007 год") 2007 год
+                        option(value="2008 год") 2008 год
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/nav-next-prev
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+                data-chart-url="demo/8"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title структура по категориям
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .custom-select-box.custom-select-box-sm.mb-2.mb-lg-0
+                      select(name="region")
+                        option(value="", disabled, selected) 2000 год
+                        option(value="2001 год") 2001 год
+                        option(value="2002 год") 2002 год
+                        option(value="2003 год") 2003 год
+                        option(value="2004 год") 2004 год
+                        option(value="2005 год") 2005 год
+                        option(value="2006 год") 2006 год
+                        option(value="2007 год") 2007 год
+                        option(value="2008 год") 2008 год
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Годы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/nav-next-prev
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+
+    include section/footer
+
+
+
+
+
+
+
+
+
+

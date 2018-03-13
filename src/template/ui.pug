@@ -1,0 +1,430 @@
+include global-include
+doctype html
+html
+  head
+    include section/document-head
+
+  body.research-page
+
+    include section/header
+
+    main.main.d-flex.flex-column.ui-kit
+
+      .ui-section-separator
+      .container
+        .row
+          .col
+            h1 This is the example of an average H1 heading.
+            p .Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+
+
+      .ui-section-separator
+      .container
+        .row
+          .col
+            h2 This is the example of an average H1 heading.
+            p .Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+
+      .ui-section-separator
+      .container
+        .row
+          .col
+            ul
+              li This is the example of a title or messages
+              li This is the example of a title or messages
+              li This is the example of a title or messages
+
+        .row
+          .col
+            .btn.btn-primary.btn-sm ButtonSmall Default
+            .btn.btn-primary.btn-sm.hover ButtonSmall Hover
+            .btn.btn-primary.btn-sm.active ButtonSmall Active
+            .btn.btn-primary.btn-sm.disabled ButtonSmall Disabled
+
+        .row
+          .col
+            .btn.btn-secondary.btn-sm ButtonSmall Default
+            .btn.btn-secondary.btn-sm.hover ButtonSmall Hover
+            .btn.btn-secondary.btn-sm.active ButtonSmall Active
+            .btn.btn-secondary.btn-sm.disabled ButtonSmall Disabled
+
+        .row
+          .col
+            .btn.btn-primary.btn-lg ButtonLarge Default
+            .btn.btn-primary.btn-lg.hover ButtonLarge Hover
+            .btn.btn-primary.btn-lg.active ButtonLarge Active
+            .btn.btn-primary.btn-lg.disabled ButtonLarge Disabled
+
+        .row
+          .col
+            .btn.btn-secondary.btn-lg ButtonLarge Default
+            .btn.btn-secondary.btn-lg.hover ButtonLarge Hover
+            .btn.btn-secondary.btn-lg.active ButtonLarge Active
+            .btn.btn-secondary.btn-lg.disabled ButtonLarge Disabled
+
+
+        .row
+          .col
+            .btn-group(role='group', aria-label='Basic example')
+              button.btn.btn-primary.btn-sm(type='button') Left
+              button.btn.btn-primary.btn-sm(type='button') Middle
+              button.btn.btn-primary.btn-sm(type='button') Right
+            .btn-group(role='group', aria-label='Basic example')
+              button.btn.btn-primary.btn-lg(type='button') Left
+              button.btn.btn-primary.btn-lg(type='button') Middle
+              button.btn.btn-primary.btn-lg(type='button') Right
+
+
+        .row
+          .col
+            .custom-select-box.custom-select-box-sm
+              select(name="region")
+                option(value="", disabled, selected) Select Small Default
+                option(value="Регион 01") Регион 01
+                option(value="Регион 02") Регион 02
+                option(value="Регион 03") Регион 03
+                option(value="Регион 04") Регион 04
+                option(value="Регион 05") Регион 05
+                option(value="Регион 06") Регион 06
+                option(value="Регион 07") Регион 07
+                option(value="Регион 08") Регион 08
+
+
+        .row
+          .col
+            .custom-select-box.custom-select-box-lg
+              select(name="region")
+                option(value="", disabled, selected) Select Large Default
+                option(value="Регион 01") Регион 01
+                option(value="Регион 02") Регион 02
+                option(value="Регион 03") Регион 03
+                option(value="Регион 04") Регион 04
+                option(value="Регион 05") Регион 05
+                option(value="Регион 06") Регион 06
+                option(value="Регион 07") Регион 07
+                option(value="Регион 08") Регион 08
+
+
+        .row
+          .col
+            include components/timeline-dates
+
+
+        .row
+          .col
+            include components/timeline
+
+
+        .row
+          .col
+            include components/timeline-extended
+
+      .ui-section-separator
+      .container
+        .row
+          .col-12.col-md-6.d-flex.justify-content-between
+            a(href="!#") Single Link Default
+            a.is-active(href="!#") Single Link Hovered
+            a.is-disabled(href="!#") Single Link Disabled
+
+        .row
+          .col.d-flex.justify-content-between
+            label.custom-input-radio
+              input(type="radio", name="custom-radio")
+              .input-icon.default
+                include ../images/radio-icon-default.svg
+              .input-icon.checked
+                include ../images/radio-icon-checked.svg
+              | sdasdasdas
+            label.custom-input-radio.active
+              input(type="radio", name="custom-radio")
+              .input-icon.default
+                include ../images/radio-icon-default.svg
+              .input-icon.checked
+                include ../images/radio-icon-checked.svg
+              | sdasdasdas
+            label.custom-input-radio
+              input(type="radio", name="custom-radio", checked)
+              .input-icon.default
+                include ../images/radio-icon-default.svg
+              .input-icon.checked
+                include ../images/radio-icon-checked.svg
+              | sdasdasdas
+            label.custom-input-radio
+              input(type="radio", name="custom-radio", disabled)
+              .input-icon.default
+                include ../images/radio-icon-default.svg
+              .input-icon.checked
+                include ../images/radio-icon-checked.svg
+              | sdasdasdas
+
+        .row
+          .col.d-flex.justify-content-between
+            label.custom-input-checkbox
+              input(type="checkbox", name="custom-checkbox")
+              .input-icon.default
+                include ../images/checkbox-icon-default.svg
+              .input-icon.checked
+                include ../images/checkbox-icon-checked.svg
+              | sdasdasdas
+            label.custom-input-checkbox.active
+              input(type="checkbox", name="custom-checkbox")
+              .input-icon.default
+                include ../images/checkbox-icon-default.svg
+              .input-icon.checked
+                include ../images/checkbox-icon-checked.svg
+              | sdasdasdas
+            label.custom-input-checkbox
+              input(type="checkbox", name="custom-checkbox", checked)
+              .input-icon.default
+                include ../images/checkbox-icon-default.svg
+              .input-icon.checked
+                include ../images/checkbox-icon-checked.svg
+              | sdasdasdas
+            label.custom-input-checkbox
+              input(type="checkbox", name="custom-checkbox", disabled)
+              .input-icon.default
+                include ../images/checkbox-icon-default.svg
+              .input-icon.checked
+                include ../images/checkbox-icon-checked.svg
+              | sdasdasdas
+
+
+        .row
+          .col.d-flex.justify-content-start
+            a.addition.icon-link(href="#!")
+              include ../images/favourite.svg
+              | В избранное
+            a.addition.icon-link(href="#!")
+              include ../images/download.svg
+              | Скачать архив (25mb)
+
+        .row
+          .col.d-flex.justify-content-around
+            .value-counter.d-flex.align-items-center
+              .value-down.d-flex.align-items-center
+                include ../images/decreaseicon.svg
+              .value-label Годы
+              .value-up.d-flex.align-items-center
+                include ../images/increase-icon.svg
+            .value-counter.d-flex.align-items-center
+              .value-down.d-flex.align-items-center.disabled
+                include ../images/decreaseicon.svg
+              .value-label Годы
+              .value-up.d-flex.align-items-center
+                include ../images/increase-icon.svg
+            .value-counter.d-flex.align-items-center
+              .value-down.d-flex.align-items-center
+                include ../images/decreaseicon.svg
+              .value-label Годы
+              .value-up.d-flex.align-items-center.disabled
+                include ../images/increase-icon.svg
+            .value-counter.d-flex.align-items-center
+              .value-down.d-flex.align-items-center
+                include ../images/decreaseicon.svg
+              .value-label Годы
+              .value-up.d-flex.align-items-center.active
+                include ../images/increase-icon.svg
+
+      .ui-section-separator
+      .container
+        .row
+          .col-12.col-md-6.d-flex.justify-content-between.align-items-center
+            include ../images/facebook.svg
+            include ../images/vkontakte.svg
+            include ../images/twitter.svg
+
+            include ../images/download.svg
+            include ../images/favourite.svg
+            include ../images/production.svg
+            include ../images/export.svg
+            include ../images/import.svg
+            include ../images/production-icon.svg
+            include ../images/prices.svg
+            include ../images/companies.svg
+            include ../images/search.svg
+            include ../images/close-icon.svg
+
+
+      .ui-section-separator
+      .container
+        .row
+          .col-12.col-md-6.d-flex.justify-content-between.align-items-center
+            include ../images/slider-left-icon.svg
+            include ../images/sliderright-icon.svg
+            include ../images/slider-up-icon.svg
+            include ../images/log-in.svg
+            include ../images/radio-icon-default.svg
+            include ../images/radio-icon-checked.svg
+            include ../images/checkbox-icon-default.svg
+            include ../images/checkbox-icon-checked.svg
+            include ../images/info-icon.svg
+
+
+      .ui-section-separator
+      .container
+        .row
+          .col-12.col-md-3.d-flex.justify-content-between.align-items-center
+            include ../images/arrow-left-icon.svg
+            include ../images/arrow-down-icon.svg
+            include ../images/arrow-right-icon.svg
+            include ../images/increase-icon.svg
+            include ../images/decreaseicon.svg
+            include ../images/menu-icon.svg
+
+
+      .ui-section-separator
+      .container
+        .row
+          .col-12.col-lg-3.sidebar
+            +left-menu("production")
+
+
+        .row
+          .col
+            .chart-container.chart-component(
+            data-chart-url="demo/2"
+            )
+              .chart-header.d-flex.justify-content-between.align-items-stretch
+                .chart-title-container.d-flex.flex-column.justify-content-center
+                  .chart-title Динамика по категориям
+                .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                  .chart-menu-button.icon-link.active
+                    include ../images/download.svg
+                    | Скачать
+                  .chart-menu-list.dropdown-menu
+                    a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                      .format PNG
+                    a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                      .format JPEG
+                    a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                      .format SVG
+                    a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                      .format CSV
+                    a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                      .format PDF
+                    .menu-separator
+                    a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+              .chart-body
+                .chart-controls.d-flex.justify-content-between.align-items-center
+                  .btn-group(role='group', aria-label='Basic example')
+                    button.btn.btn-primary.btn-sm(
+                    type='button',
+                    data-filter="measure", data-type="percent"
+                    ) % Проценты
+                    button.btn.btn-primary.btn-sm(
+                    type='button',
+                    data-filter="measure", data-type="tons"
+                    ) Тысячи тонн
+                  .value-counter.d-flex.align-items-center
+                    .value-down.d-flex.align-items-center.disabled
+                      include ../images/decreaseicon.svg
+                    .value-label Годы
+                    .value-up.d-flex.align-items-center
+                      include ../images/increase-icon.svg
+                .chart-object
+                include components/timeline
+
+
+            .chart-container.chart-component(
+            data-chart-url="demo/10"
+            )
+              .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                .chart-title-container.d-flex.flex-column.justify-content-center
+                  .chart-title Доля производителей в производстве
+                .chart-menu-wrapper.d-flex.justify-content-end
+                  .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    .chart-menu-button.icon-link.active
+                      include ../images/download.svg
+                      | Скачать
+                    .chart-menu-list.dropdown-menu
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                        .format PNG
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                        .format JPEG
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                        .format SVG
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                        .format CSV
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                        .format PDF
+                      .menu-separator
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+              .chart-body
+                .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                  .custom-select-box.custom-select-box-sm.mr-2.mb-2.mb-lg-0
+                    select(name="region")
+                      option(value="", disabled, selected) 2000 год
+                      option(value="2001 год") 2001 год
+                      option(value="2002 год") 2002 год
+                      option(value="2003 год") 2003 год
+                      option(value="2004 год") 2004 год
+                      option(value="2005 год") 2005 год
+                      option(value="2006 год") 2006 год
+                      option(value="2007 год") 2007 год
+                      option(value="2008 год") 2008 год
+                  .value-counter.d-flex.align-items-center
+                    .value-down.d-flex.align-items-center.disabled
+                      include ../images/decreaseicon.svg
+                    .value-label Кварталы
+                    .value-up.d-flex.align-items-center
+                      include ../images/increase-icon.svg
+                .chart-object
+                include components/timeline-dates
+                include components/timeline-extended
+
+            .chart-container.chart-component(
+            data-chart-url="demo/11"
+            )
+              .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                .chart-title-container.d-flex.flex-column.justify-content-center
+                  .chart-title Розничные цены по субъектам РФ
+                .chart-menu-wrapper.d-flex.justify-content-end
+                  .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                    .chart-menu-button.icon-link.active
+                      include ../images/download.svg
+                      | Скачать
+                    .chart-menu-list.dropdown-menu
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                        .format PNG
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                        .format JPEG
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                        .format SVG
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                        .format CSV
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                        .format PDF
+                      .menu-separator
+                      a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+              .chart-body
+                .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                  .d-flex.flex-column.flex-lg-row
+                    .custom-select-box.custom-select-box-sm.mr-2.mb-2.mb-lg-0
+                      select(name="region")
+                        option(value="", disabled, selected) Цены по субъектам РФ
+                        option(value="Значение 1") Значение 1
+                        option(value="Значение 2") Значение 2
+                        option(value="Значение 3") Значение 3
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="year", data-type="2017"
+                      ) 2017 год
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="year", data-type="2016"
+                      ) 2016 год
+                  .chart-text-info Цены указаны за киллограм
+                .chart-object
+
+    include section/footer
+
+
+
+
+
+
+
+
+

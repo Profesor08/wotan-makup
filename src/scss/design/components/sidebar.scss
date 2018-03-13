@@ -1,0 +1,6 @@
+.sidebar {
+  @include media-breakpoint-up(lg) {
+    padding-right: 11.5px;
+    padding-left: 0;
+  }
+}

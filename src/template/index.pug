@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    include section/document-head
+
+  body.index-page
+
+    picture.intro-background
+      source(srcset=require("../images/background@3x.png"), media="(min-width: 2521px)")
+      source(srcset=require("../images/background@2x.png"), media="(min-width: 1261px)")
+      img(src=require("../images/background.png"), alt="")
+
+    include section/header
+
+    main.main.d-flex.justify-content-center.align-items-center.align-items-lg-start
+      .container.d-flex.flex-column.justify-content-center.align-items-center
+        h2.title.text-center Сервис для подготовки маркетинговых исследований и получения информации по рынкам
+        include components/search-box
+
+    include section/footer

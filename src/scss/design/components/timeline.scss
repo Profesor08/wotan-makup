@@ -1,0 +1,136 @@
+@import "../../vars";
+
+
+$timeline-line: #cecece;
+$timeline-anchor: #cecece;
+$timeline-anchor-active: #d96c6c;
+$timeline-anchor-shadow-active: rgba(217, 108, 108, 0.99);
+
+$timeline-anchor-not-active: #eaeaea;
+
+
+.timeline {
+  width: 100%;
+  height: 16px;
+  position: relative;
+
+  .line {
+    background: $timeline-line;
+    width: calc(100% - 8px - 8px);
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin: 0 8px;
+
+    .line-bar {
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $timeline-anchor-not-active;
+    }
+  }
+
+  .anchors-wrapper {
+    width: calc(100% - 16px);
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin: 0 8px;
+  }
+
+  .anchor {
+    display: flex;
+    width: 0;
+    height: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    .anchor-icon {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: $timeline-anchor;
+      background-repeat: no-repeat;
+      background-size: 40%;
+    }
+
+    &:first-child, &:last-child {
+      .anchor-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &:first-child {
+      .anchor-icon {
+        background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>93109E2C-6BA3-4866-AC26-02B0DFCF15F6</title><desc>Created with sketchtool.</desc><defs></defs><g id="UIKIT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-141.000000, -3135.000000)" id="Icons&amp;Grpahics"><g transform="translate(-26.000000, 2840.000000)"><g id="Icon16px" transform="translate(98.000000, 252.000000)"><g id="Content" transform="translate(0.000000, 40.000000)"><g id="ArrowDownIcon-Copy" transform="translate(72.000000, 8.000000) scale(-1, 1) rotate(-90.000000) translate(-72.000000, -8.000000) translate(64.000000, 0.000000)"><rect id="Rectangle-9" x="0" y="0" width="16" height="16"></rect><polygon id="Shape-2" fill="#FFFFFF" fill-rule="nonzero" points="4.54668442 5.04047277 3 6.65625 8 11 13 6.65625 11.5411727 5 8 8"></polygon></g></g></g></g></g></g></svg>');
+        background-position: center left 4px;
+      }
+    }
+
+    &:last-child {
+      .anchor-icon {
+        background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>D29CB090-4DA1-40B5-B7FA-2E115FC979D6</title><desc>Created with sketchtool.</desc><defs></defs><g id="UIKIT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-77.000000, -3135.000000)" id="Icons&amp;Grpahics"><g transform="translate(-26.000000, 2840.000000)"><g id="Icon16px" transform="translate(98.000000, 252.000000)"><g id="Content" transform="translate(0.000000, 40.000000)"><g id="ArrowDownIcon" transform="translate(8.000000, 8.000000) rotate(-90.000000) translate(-8.000000, -8.000000) "><rect id="Rectangle-9" x="0" y="0" width="16" height="16"></rect><polygon id="Shape-2" fill="#FFFFFF" fill-rule="nonzero" points="4.54668442 5.04047277 3 6.65625 8 11 13 6.65625 11.5411727 5 8 8"></polygon></g></g></g></g></g></g></svg>');
+        background-position: center left 5px;
+      }
+    }
+
+    &:hover, &.active {
+      .anchor-icon {
+        width: 16px;
+        height: 16px;
+        box-shadow: 0 1px 2px 0 $timeline-anchor-shadow-active;
+        background-color: $timeline-anchor-active;
+        z-index: 1;
+      }
+
+      &:not(:first-child) {
+        .anchor-icon {
+          background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>D29CB090-4DA1-40B5-B7FA-2E115FC979D6</title><desc>Created with sketchtool.</desc><defs></defs><g id="UIKIT" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-77.000000, -3135.000000)" id="Icons&amp;Grpahics"><g transform="translate(-26.000000, 2840.000000)"><g id="Icon16px" transform="translate(98.000000, 252.000000)"><g id="Content" transform="translate(0.000000, 40.000000)"><g id="ArrowDownIcon" transform="translate(8.000000, 8.000000) rotate(-90.000000) translate(-8.000000, -8.000000) "><rect id="Rectangle-9" x="0" y="0" width="16" height="16"></rect><polygon id="Shape-2" fill="#FFFFFF" fill-rule="nonzero" points="4.54668442 5.04047277 3 6.65625 8 11 13 6.65625 11.5411727 5 8 8"></polygon></g></g></g></g></g></g></svg>');
+          background-position: center left 5px;
+        }
+      }
+
+      & ~ {
+        .anchor {
+          .anchor-icon {
+            background: white;
+            box-shadow: 0 0 0 2px $timeline-anchor-not-active inset;
+          }
+
+          &:last-child {
+            .anchor-icon {
+              width: 8px;
+              height: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.extended {
+    .anchor:not(:first-child):not(:last-child):not(:hover):not(.active) {
+      .anchor-icon {
+        width: 4px;
+        height: 4px;
+      }
+
+      &:nth-child(5n + 1) {
+        .anchor-icon {
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+  }
+}

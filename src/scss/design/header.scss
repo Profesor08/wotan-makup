@@ -1,0 +1,130 @@
+@import "../vars";
+@import "../mixins";
+
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FEFEFE;
+  height: 84px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 0 0 0 rgba(0, 0, 0, 0.24);
+  transition: ease-out all 350ms;
+
+  &:before {
+    @include pseudo-full-size();
+    opacity: 0.1;
+    background-image: linear-gradient(to top, rgba(247, 245, 245, 0.05), rgba(247, 245, 245, 0.94) 24%, #cecece);
+    transition: ease-out all 350ms;
+    z-index: 1;
+  }
+
+  &:after {
+    @include pseudo-full-size();
+    opacity: 0;
+    background-image: linear-gradient(266deg, #120c5a, #630001);
+    transition: ease-out all 350ms;
+    z-index: 1;
+  }
+
+
+  .logo {
+
+    .logo-icon {
+      width: 24px;
+      height: 40px;
+      background-color: #bc0000;
+    }
+
+  }
+
+  .collapse.navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar {
+    position: relative;
+    padding: 0;
+    z-index: 2;
+  }
+
+  .collapsing, .collapse.show {
+    position: absolute;
+    top: 100%;
+    right: 0;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    text-transform: uppercase;
+    color: $nav-link-color;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    padding: 30px 16px;
+    border-radius: 2px;
+    transition: ease-out padding 350ms;
+
+    &:hover {
+      background-color: rgba(#630001, 0.04);
+      color: $nav-link-active;
+    }
+  }
+
+  .design-icon {
+    margin-top: -2px;
+    margin-right: 10px;
+  }
+
+  .menu-button {
+    svg path {
+      transition: ease all 250ms;
+    }
+
+    &:not(.collapsed) {
+      svg path {
+        fill: $link-active;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .navbar-collapse {
+      border-radius: 6px;
+      background-image: linear-gradient(to top, #f8f8f8, #ffffff);
+      box-shadow: 0 24px 21px 0 rgba(99, 0, 1, 0.17);
+      border: solid 1px #eaeaea;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 10px 16px;
+    }
+  }
+
+}
+
+body.floating-header {
+
+  .header {
+    height: 60px;
+    //box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); // material shadow
+    box-shadow: 0 4px 1px 0 rgba(99, 0, 1, 0.05);
+    &:before {
+      opacity: 0;
+    }
+
+    &:after {
+      opacity: 0.1;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .navbar-nav .nav-link {
+        padding: 18px 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../vars";
+
+.footer {
+  height: 72px;
+
+  .copyright {
+
+    .copy-symbol {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.33;
+      margin-right: 10px;
+    }
+
+    .copy-text {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+    }
+  }
+
+  .social-links {
+    list-style: none;
+    padding: 0;
+
+    .title {
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+      margin-right: 15px;
+    }
+
+    .social-item {
+      margin: 0 7.5px;
+
+      .social-link {
+        &:hover {
+          svg path {
+            fill: $link-active;
+          }
+        }
+      }
+    }
+  }
+}

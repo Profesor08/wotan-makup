@@ -1,0 +1,25 @@
+mixin left-menu(activeItem)
+  nav.left-menu
+    a.menu-item.icon-link(class={active: activeItem === "production"} href="research.html")
+      include ../../images/production.svg
+      | Производство
+
+    a.menu-item.icon-link(class={active: activeItem === "export"} href="export.html")
+      include ../../images/export.svg
+      | Экспорт
+
+    a.menu-item.icon-link(class={active: activeItem === "import"} href="import.html")
+      include ../../images/import.svg
+      | Импорт
+
+    a.menu-item.icon-link(class={active: activeItem === "marketplace"} href="marketplace.html")
+      include ../../images/production-icon.svg
+      | Рынок в целом
+
+    a.menu-item.icon-link(class={active: activeItem === "prices"} href="prices.html")
+      include ../../images/prices.svg
+      | Цены в целом
+
+    a.menu-item.icon-link(class={active: activeItem === "companies"} href="companies.html")
+      include ../../images/companies.svg
+      | Компании и игроки

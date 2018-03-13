@@ -1,0 +1,130 @@
+@import "../../vars";
+
+.custom-select-box {
+  border: solid 1px $form-control-border-default;
+  background-image: url('data:image/svg+xml;utf8,<svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><title>C6FD8513-68C1-479D-9069-6989A5B956F9</title><g fill="none" fill-rule="evenodd"><path d="M-3-5h16v16H-3z"/><path fill="rgba(0, 0, 0, 0.5)" fill-rule="nonzero" d="M1.547.04L0 1.656 5 6l5-4.344L8.541 0 5 3z"/></g></svg>');
+  background-position: right 24px center;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-color: #FFFFFF;
+  border-radius: 25.5px;
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+
+  &.custom-select-box-sm {
+    padding: 4px 48px 4px 16px;
+  }
+
+  &.custom-select-box-lg {
+    padding: 12px 64px 12px 24px;
+  }
+
+  &:hover {
+    border: solid 1px $form-control-border-hover;
+    cursor: pointer;
+  }
+
+  &:focus, &.is-open {
+    border: solid 1px $form-control-border-focus;
+    box-shadow: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.custom-select-box-sm {
+      padding: 4px 16px 4px 16px;
+    }
+
+    &.custom-select-box-lg {
+      padding: 12px 34px 12px 24px;
+    }
+  }
+
+  select {
+    display: none;
+  }
+
+  .selected-option {
+    white-space: nowrap;
+    user-select: none;
+    overflow: hidden;
+
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: 0.1px;
+    text-align: left;
+    color: $font-control-placeholder;
+  }
+
+  .options-list-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    padding: 8px 12px;
+    transform: translateY(5px);
+
+    border-radius: 6px;
+    background-image: linear-gradient(to top, #f8f8f8, #ffffff);
+    box-shadow: 0 24px 21px 0 rgba(99, 0, 1, 0.17);
+    border: solid 1px #eaeaea;
+
+    max-height: calc(50vh - 100px);
+    overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+      max-height: 200px;
+    }
+  }
+
+  .options-list {
+    max-height: calc(50vh - 100px - 16px);
+    overflow-y: auto;
+
+    @include media-breakpoint-down(sm) {
+      max-height: calc(200px - 16px);
+    }
+  }
+
+  .option-item {
+    white-space: nowrap;
+    user-select: none;
+    padding-right: 12px;
+
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: left;
+    color: $font-control-placeholder;
+    transition: ease all 250ms;
+
+    &.is-disabled {
+      color: $link-disabled;
+      cursor: default;
+    }
+
+    &:not(.is-disabled):hover {
+      color: $link-active;
+    }
+  }
+
+  &:not(.is-open) {
+    .options-list-wrapper {
+      display: none;
+    }
+  }
+
+  &.is-open {
+    .options-list-wrapper {
+      display: block;
+    }
+  }
+}

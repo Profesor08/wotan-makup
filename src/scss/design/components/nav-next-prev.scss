@@ -1,0 +1,31 @@
+.nav-next-prev {
+  margin: 10px 0;
+
+  .icon-link {
+    svg {
+      width: 10px;
+
+      &:first-child {
+        margin: 0 4px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 4px;
+      }
+
+      path, polygon {
+        fill: rgb(99, 0, 1);
+      }
+    }
+  }
+
+  .nav-text {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: 0.1px;
+    color: rgba(#630001, .55);
+  }
+}

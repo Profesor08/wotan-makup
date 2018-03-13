@@ -1,0 +1,25 @@
+.timeline-dates {
+  margin: 5px 0;
+
+  .date-value  {
+    font-size: 12px;
+
+    @include media-breakpoint-only(lg) {
+      &:nth-child(3n) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-only(md) {
+      &:nth-child(2n) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &:not(:nth-child(3n)) {
+        display: none;
+      }
+    }
+  }
+}

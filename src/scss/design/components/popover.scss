@@ -1,0 +1,39 @@
+.popover {
+  border-radius: 6px;
+  background-image: linear-gradient(to top, #f8f8f8, #ffffff);
+  box-shadow: 0 24px 21px 0 rgba(99, 0, 1, 0.17);
+  border: solid 1px #eaeaea;
+
+  .popover-body {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    letter-spacing: 0.1px;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background: no-repeat url(data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2014%2014%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0D%0A%20%20%20%20%3Ctitle%3E2C33CE35-4332-4582-9B21-F95883037B24%3C%2Ftitle%3E%0D%0A%20%20%20%20%3Cdesc%3ECreated%20with%20sketchtool.%3C%2Fdesc%3E%0D%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0D%0A%20%20%20%20%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0D%0A%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate%28-597.000000%2C%20-2965.000000%29%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate%28-26.000000%2C%202840.000000%29%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate%2898.000000%2C%2080.000000%29%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate%280.000000%2C%2040.000000%29%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%20transform%3D%22translate%28520.000000%2C%200.000000%29%22%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpolygon%20fill%3D%22%23AA7374%22%20fill-rule%3D%22nonzero%22%20points%3D%2219%206.41%2017.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012%22%3E%3C%2Fpolygon%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%220%200%2024%200%2024%2024%200%2024%22%3E%3C%2Fpolygon%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0D%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0D%0A%20%20%20%20%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}

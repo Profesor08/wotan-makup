@@ -1,0 +1,83 @@
+.custom-input-checkbox, .custom-input-radio {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  padding-left: 24px;
+
+  input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    width: 16px;
+    height: 16px;
+
+    path, circle {
+      width: 100%;
+      height: 100%;
+
+      transition: ease all 250ms;
+    }
+
+    &.default {
+      display: inline-block;
+
+      path, circle {
+        fill: #cecece;
+      }
+    }
+
+    &.checked {
+      display: none;
+
+      path, circle {
+        fill: #cecece;
+      }
+    }
+  }
+
+  &:hover, &.active {
+    input:not(:disabled) ~ {
+      .input-icon {
+        path, circle {
+          fill: rgba(99, 0, 1, 0.56);
+        }
+      }
+    }
+  }
+
+  input:checked ~ {
+    .input-icon {
+      &.default {
+        display: none;
+      }
+
+      &.checked {
+        display: inline-block;
+
+        path {
+          fill: rgba(99, 0, 1, 0.2);
+        }
+
+        circle, path:last-child {
+          fill: rgba(99, 0, 1, 0.56);
+        }
+      }
+    }
+  }
+
+  input:disabled ~ {
+    * {
+      opacity: .8;
+    }
+  }
+}

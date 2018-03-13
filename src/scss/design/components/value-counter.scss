@@ -1,0 +1,34 @@
+.value-counter {
+  .value-down {
+    margin-right: 22px;
+  }
+  .value-up {
+    margin-left: 22px;
+  }
+
+  .value-down, .value-up {
+    svg path {
+      fill: rgba(0, 0, 0, 0.5);
+    }
+
+    &.disabled, &:disabled {
+      svg path {
+        fill: rgba(206, 206, 206, 0.55);
+      }
+    }
+
+    &:hover, &.active {
+      cursor: pointer;
+
+      &:not(.disabled):not(disabled) svg path {
+        fill: rgba(99, 0, 1, 0.55);
+      }
+    }
+  }
+
+  .value-label {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.71;
+  }
+}

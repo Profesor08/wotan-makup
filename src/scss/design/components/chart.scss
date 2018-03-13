@@ -1,0 +1,12 @@
+.highcharts-tooltip {
+
+  .highcharts-label-box:not(:first-child), .highcharts-tooltip-box:not(:first-child) {
+
+  }
+
+  .highcharts-label-box:first-child, .highcharts-tooltip-box:first-child {
+    border: solid 1px #eaeaea;
+  }
+
+}
+

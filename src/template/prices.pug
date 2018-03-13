@@ -1,0 +1,326 @@
+include global-include
+doctype html
+html
+  head
+    include section/document-head
+
+  body.research-page
+
+    include section/header
+
+    main.main.d-flex.flex-column
+
+      include section/search-section
+
+      .page-nav-top
+        .container.d-sm-flex.justify-content-between.align-items-start.align-items-lg-center
+          .breadcrumbs.d-flex.flex-column.flex-lg-row
+            a.crumb(href="#!") Россия
+            a.crumb(href="#!") Пищевая продукция
+            a.crumb(href="#!") Хлебобулочная продукция
+          .page-addition.d-flex.flex-column.flex-lg-row
+            a.addition.icon-link(href="#!")
+              include ../images/favourite.svg
+              | В избранное
+            a.addition.icon-link(href="#!")
+              include ../images/download.svg
+              | Скачать архив (25mb)
+
+      .page-title
+        .container
+          h1 Рынок хлебобулочных полуфабрикатов
+
+
+
+      .content-section
+        .container
+          .row
+            .col-12.col-lg-3.sidebar
+              nav.left-menu
+                +left-menu("prices")
+
+
+            .col-12.col-lg-9.page-content
+
+              .chart-container.chart-component(
+              data-chart-url="demo/5"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title динамика цен по категориям
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="percent"
+                      ) % Индекс цен
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="tons"
+                      ) USD / Тонна
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Кварталы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+              data-chart-url="demo/5"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title Цены производителей по федеральным округам
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="percent"
+                      ) % Индекс цен
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="tons"
+                      ) USD / Тонна
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Кварталы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+              data-chart-url="demo/5"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title Цены экспорта по федеральным округам
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="percent"
+                      ) % Индекс цен
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="tons"
+                      ) USD / Тонна
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Кварталы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+              data-chart-url="demo/5"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title Цены импорта по федеральным округам
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="percent"
+                      ) % Индекс цен
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="tons"
+                      ) USD / Тонна
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Кварталы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+              data-chart-url="demo/5"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title Розничные цены по федеральным округам
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="percent"
+                      ) % Индекс цен
+                      button.btn.btn-primary.btn-sm(
+                      type='button',
+                      data-filter="measure", data-type="tons"
+                      ) USD / Тонна
+                    .value-counter.d-flex.align-items-center
+                      .value-down.d-flex.align-items-center.disabled
+                        include ../images/decreaseicon.svg
+                      .value-label Кварталы
+                      .value-up.d-flex.align-items-center
+                        include ../images/increase-icon.svg
+                  .chart-object
+                  include components/timeline-dates
+                  include components/timeline-extended
+
+              .chart-container.chart-component(
+              data-chart-url="demo/11"
+              )
+                .chart-header.d-flex.flex-column.justify-content-lg-between.align-items-lg-stretch.flex-lg-row
+                  .chart-title-container.d-flex.flex-column.justify-content-center
+                    .chart-title Розничные цены по субъектам РФ
+                  .chart-menu-wrapper.d-flex.justify-content-end
+                    .chart-menu.dropdown.d-flex(role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                      .chart-menu-button.icon-link.active
+                        include ../images/download.svg
+                        | Скачать
+                      .chart-menu-list.dropdown-menu
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="png") Формат
+                          .format PNG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="jpeg") Формат
+                          .format JPEG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="svg") Формат
+                          .format SVG
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="csv") Формат
+                          .format CSV
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="pdf") Формат
+                          .format PDF
+                        .menu-separator
+                        a.menu-item.d-flex.align-items-center(href="#!", data-download="archive-link") Архив (13mb)
+                .chart-body
+                  .chart-controls.d-flex.justify-content-lg-between.align-items-lg-center.flex-column.flex-lg-row
+                    .d-flex.flex-column.flex-lg-row
+                      .custom-select-box.custom-select-box-sm.mr-2.mb-2.mb-lg-0
+                        select(name="region")
+                          option(value="", disabled, selected) Цены по субъектам РФ
+                          option(value="Значение 1") Значение 1
+                          option(value="Значение 2") Значение 2
+                          option(value="Значение 3") Значение 3
+                      .btn-group.mb-2.mb-lg-0(role='group', aria-label='Basic example')
+                        button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="year", data-type="2017"
+                        ) 2017 год
+                        button.btn.btn-primary.btn-sm(
+                        type='button',
+                        data-filter="year", data-type="2016"
+                        ) 2016 год
+                    .chart-text-info Цены указаны за киллограм
+                  .chart-object
+
+
+    include section/footer
+
+
+
+
+
+
+
+
+
+

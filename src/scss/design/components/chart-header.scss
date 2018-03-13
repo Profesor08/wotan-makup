@@ -1,0 +1,102 @@
+@import "../../vars";
+@import "../../mixins";
+
+.chart-header {
+  height: 56px;
+  border-radius: 6px;
+  background-image: linear-gradient(to bottom, #ffffff, #f8f8f8);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(#cecece, 0.4);
+
+  @include media-breakpoint-down(md) {
+    height: 112px;
+
+    .chart-title-container {
+      height: 50%;
+    }
+
+    .chart-menu-wrapper {
+      height: 50%;
+      border-top: 1px solid rgba(206, 206, 206, 0.4);
+    }
+  }
+
+  .chart-title-container {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.71;
+    letter-spacing: 0.4px;
+    color: $primary-font-color;
+    margin-left: 24px;
+
+    .chart-title {
+      text-transform: uppercase;
+    }
+
+    .chart-sub-title {
+      font-weight: normal;
+      line-height: 1.43;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  .chart-menu {
+    position: relative;
+
+    .chart-menu-button {
+      height: 100%;
+      padding: 0 24px 0 25px;
+      border-left: 1px solid rgba(206, 206, 206, 0.55);
+      user-select: none;
+      margin-right: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active ~ .chart-menu-list {
+        //display: block;
+      }
+
+      @include media-breakpoint-down(lg) {
+        &:first-child {
+
+        }
+      }
+    }
+
+    .chart-menu-list {
+      //display: none;
+      position: absolute;
+      min-width: 100%;
+      top: 100%;
+      left: 0;
+      white-space: nowrap;
+      border-radius: 6px;
+      background-image: linear-gradient(to top, #f8f8f8, #ffffff);
+      box-shadow: 0 24px 21px 0 rgba(99, 0, 1, 0.17);
+      border: solid 1px #eaeaea;
+      transform: translateY(4px);
+      padding: 8px 0 0 0;
+    }
+
+    .menu-item {
+      height: 40px;
+      padding: 0 21px;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      color: $primary-font-color;
+
+      .format {
+        font-weight: 600;
+        margin-left: 5px;
+      }
+
+      &:hover {
+        background: rgba(#eaeaea, 0.55);
+      }
+    }
+  }
+}

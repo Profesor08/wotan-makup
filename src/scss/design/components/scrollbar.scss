@@ -1,0 +1,28 @@
+$dragger: #B3B3B3;
+
+::-webkit-scrollbar {
+  width: 4px;
+  margin: 6px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-track-piece { /* 4 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: darken($dragger, 5%);
+}
+
+::-webkit-scrollbar-corner { /* 6 */
+}
+
+::-webkit-resizer { /* 7 */
+}

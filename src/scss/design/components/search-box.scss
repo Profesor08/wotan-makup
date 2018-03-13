@@ -1,0 +1,66 @@
+@import "../../vars";
+
+.search-box {
+  width: 100%;
+  max-width: 930px;
+  border-radius: 30px;
+  box-shadow: 0 2px 1px 0 rgba(99, 0, 1, 0.12);
+
+  .custom-select-box {
+
+    &:first-child {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child) {
+      border-radius: 0;
+      border-right: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .custom-select-box {
+      background-position: right 12px center;
+      width: calc(50% - 38px);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .custom-select-box {
+      flex: 1;
+    }
+  }
+
+  .search-button {
+    border: 1px solid #E4E4E4;
+    border-left: 0;
+    border-radius: 0 30px 30px 0;
+    background-image: linear-gradient(to left, rgba(#120c5a, .66), rgba(#630001, .66));
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px #FFFFFF inset;
+    width: 76px;
+    height: 48px;
+    outline: none;
+    transition: ease all 250ms;
+
+    svg path {
+      fill: rgba(#FFFFFF, .66);
+    }
+
+    &:hover {
+      cursor: pointer;
+      fill: rgba(#FFFFFF, .76);
+      background-image: linear-gradient(to left, rgba(#120c5a, .76), rgba(#630001, .76));
+      border: solid 1px $form-control-border-hover;
+      border-left: 0;
+    }
+
+    &:focus {
+      background-image: linear-gradient(to left, rgba(#120c5a, .76), rgba(#630001, .76));
+      border-left: 0;
+      box-shadow: 0 0 0 3px #FFFFFF inset;
+    }
+  }
+}

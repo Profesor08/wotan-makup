@@ -1,0 +1,31 @@
+header.header.d-flex.align-items-center
+
+  .container
+    nav.navbar.navbar-expand-lg.navbar-light.justify-content-between.align-items-center
+      a.navbar-brand(href="index.html")
+        img.logo-image(src=require("../../images/logo.svg") alt="Wotan")
+      .menu-button.ml-auto.collapsed.d-lg-none(
+        role="button",
+        data-toggle="collapse",
+        data-target="#navbarToggler",
+        aria-controls="navbarToggler",
+        aria-expanded="false",
+        aria-label="Toggle navigation")
+        include ../../images/menu-icon.svg
+      .collapse.navbar-collapse#navbarToggler
+        ul.navbar-nav.ml-auto.mt-lg-0
+          li.nav-item.order-2.active
+            a.nav-link.d-flex.align-items-center(href="#!") О проекте
+              span.sr-only (current)
+          li.nav-item.order-3
+            a.nav-link(href="research.html") Исследования по категориям
+          li.nav-item.order-4
+            a.nav-link(href="#!") Новости
+          li.nav-item.order-5
+            a.nav-link(href="#!") Аналитика
+          li.nav-item.order-1.order-lg-6
+            a.nav-link.d-flex.align-items-center(href="#!")
+              img.design-icon.login-in(src=require("../../images/log-in.svg"), alt="")
+              span Вход и регистрация
+
+

@@ -1,0 +1,17 @@
+.tooltip {
+
+
+  .tooltip-inner {
+    background-image: linear-gradient(to top, rgba(246, 246, 246, 0.99), #ffffff);
+    box-shadow: 0 12px 12px 0 rgba(99, 0, 1, 0.2);
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 55);
+  }
+
+  .arrow {
+    &:before {
+      border-top-color: rgba(246, 246, 246, 0.99);
+    }
+  }
+}
